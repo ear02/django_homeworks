@@ -1,0 +1,15 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    Users page
+{% endblock %}
+{% block body %}
+
+<div class="h4"> Users </div>
+    {% for user in users %}
+    <ul>
+      <li>{{ user.username }} ({{ user.name }}) {{ user.email }}   </li>
+    </ul>
+    {% endfor %}
+
+{% endblock %}

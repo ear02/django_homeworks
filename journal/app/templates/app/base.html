@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block content %}
+            Journal
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <ul>
+         <li>
+            <a href="/">Main</a>
+        </li>
+        <li>
+            <a href="/users/">Users</a>
+        </li>
+        <li>
+            <a href="/posts/">Posts</a>
+        </li>
+
+    </ul>
+    <div class="main_container" >
+        <div>
+        {% block body %}
+            <h2>Journal</h2>
+        {% endblock %}
+        </div>
+    </div>
+
+</body>
+
+</html>
