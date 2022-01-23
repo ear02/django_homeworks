@@ -8,7 +8,7 @@
 <div class="h4"> Posts </div>
     {% for post in posts %}
         <ul>
-            <li> {{ post.title }} {{ post.user.user }} ( {{ post.body }} ) </li>
+            <li> <a href="{% url 'journal:post_detail' post.id %}">{{ post.title }}</a> </li>
         </ul>
     {% endfor %}
 

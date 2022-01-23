@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block content %}
+             {{ user.username }}
+        {% endblock %}
+    </title>
+<body>
+    <ul>
+        <li>name {{ user.name }}  </li>
+        <li>email {{ user.email }} </li>
+        <a href="{% url 'journal:user_list' %}">Back</a>
+    </ul>
+</body>

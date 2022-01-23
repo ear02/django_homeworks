@@ -7,10 +7,25 @@
             Journal
         {% endblock %}
     </title>
+<style>
+   hr {
+    border: none;
+    background-color: black;
+    height: 0.5px;
+   }
+  </style>
 </head>
 <body>
+    <div class="main_container" >
+        <div>
+        {% block body %}
+            <h2>Journal</h2>
+        {% endblock %}
+        </div>
+    </div>
+    <hr>
     <ul>
-         <li>
+        <li>
             <a href="/">Main</a>
         </li>
         <li>
@@ -21,13 +36,6 @@
         </li>
 
     </ul>
-    <div class="main_container" >
-        <div>
-        {% block body %}
-            <h2>Journal</h2>
-        {% endblock %}
-        </div>
-    </div>
 
 </body>
 
