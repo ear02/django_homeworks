@@ -11,5 +11,8 @@
       <li><a href="{% url 'journal:user_detail' user.id %}">{{ user.username }} ({{user.email}})</a></li>
     </ul>
     {% endfor %}
+    <li>
+        <a href="{% url 'journal:user_create' %}" class="btn">Create new user</a>
+    </li>
 
 {% endblock %}

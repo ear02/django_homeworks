@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from app.models import User, Post
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView
 
 
 def base(request):
@@ -16,6 +17,12 @@ class UsersListView(ListView):
 class UserDetailView(DetailView):
     model = User
     context_object_name = 'user'
+
+
+class AddUserCreateView(CreateView):
+    model = User
+    success_url = reverse_lazy('journal:user_list')
+    fields = ('name', 'username', 'email')
 
 
 class PostDetailView(DetailView):
@@ -34,3 +41,7 @@ class PostsListView(ListView):
         return qs
 
 
+class AddPostCreateView(CreateView):
+    model = Post
+    success_url = reverse_lazy('journal:post_list')
+    fields = ('title', 'user', 'body')

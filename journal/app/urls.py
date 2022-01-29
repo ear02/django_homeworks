@@ -21,5 +21,13 @@ urlpatterns = [
     path('posts/<int:pk>/',
          app_views.PostDetailView.as_view(),
          name='post_detail'
-     ),
+    ),
+    path('users/create/',
+         app_views.AddUserCreateView.as_view(),
+         name='user_create'
+    ),
+    path('posts/create/',
+         app_views.AddPostCreateView.as_view(),
+         name='post_create'
+    ),
 ]
